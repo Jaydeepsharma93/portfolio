@@ -5,9 +5,9 @@ import '../../../responsive.dart';
 
 class ProjectCard extends StatelessWidget {
   const ProjectCard({
-    Key? key,
+    super.key,
     required this.project,
-  }) : super(key: key);
+  });
 
   final Project project;
 
@@ -27,17 +27,17 @@ class ProjectCard extends StatelessWidget {
               overflow: TextOverflow.ellipsis,
               style: Theme.of(context).textTheme.subtitle2,
             ),
-            Spacer(),
+            const Spacer(),
             Text(
               project.description!,
               maxLines: Responsive.isMobileLarge(context) ? 3 : 4,
               overflow: TextOverflow.ellipsis,
-              style: TextStyle(height: 1.5),
+              style: const TextStyle(height: 1.5),
             ),
-            Spacer(),
+            const Spacer(),
             TextButton(
               onPressed: () {},
-              child: Text(
+              child: const Text(
                 "Read More >>",
                 style: TextStyle(color: primaryColor),
               ),
